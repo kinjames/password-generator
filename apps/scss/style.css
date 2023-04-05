@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-bg-color: #08070B;
+  --generated-password-bg-color: hsl(248, 10%, 15%);
+  --header-color: hsl(251, 9%, 53%);
+  --font-color: hsl(252, 11%, 91%);
+  --placeholder-color: hsl(251, 9%, 53%);
+  --password-strength-bg-color: hsl(248, 15%, 11%);
+  --poor-password-bg-color: hsl(0, 91%, 63%);
+  --weak-password-bg-color: hsl(13, 95%, 66%);
+  --medium-password-bg-color: hsl(42, 91%, 68%);
+  --strong-password-bg-color: hsl(127, 100%, 82%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container {
+  width: 400px;
+}
+@media (max-width: 63.9375em) {
+  .container {
+    width: 100%;
+  }
+}
+.container .header {
+  font-weight: 400;
+  color: var(--header-color);
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0.5rem 0 1.25rem;
+}
+.container .password-generator-box {
+  background-color: var(--generated-password-bg-color);
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  margin-bottom: 1.25rem;
+  padding-inline: 1.25rem;
+}
+.container .password-generator-box .passwordText {
+  color: var(--placeholder-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+}
+@media (max-width: 39.9375em) {
+  .container .password-generator-box .passwordText {
+    font-size: 1.25rem;
+  }
+}
+.container .password-generator-box .clipboard {
+  width: 10%;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--strong-password-bg-color);
+  height: 100%;
+}
+.container .password-generator-box .clipboard i:hover {
+  background-color: var(--password-strength-bg-color);
+}
+.container .password-description {
+  background-color: var(--generated-password-bg-color);
+  padding: 1.25rem;
+}
+.container .password-description .password-length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.container .password-description .password-length span {
+  display: inline-block;
+  color: var(--font-color);
+}
+.container .password-description .password-length .password-number {
+  font-size: 1.5rem;
+  color: var(--strong-password-bg-color);
+}
+.container .password-description .slidecontainer {
+  padding: 0.5rem 0;
+  width: 100%;
+}
+.container .password-description .slidecontainer .slider {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 7px;
+  background: var(--password-strength-bg-color);
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  background-image: linear-gradient(var(--strong-password-bg-color), var(--strong-password-bg-color));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+.container .password-description .slidecontainer .slider:hover {
+  opacity: 1;
+}
+.container .password-description .slidecontainer .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 21px;
+  height: 21px;
+  background: var(--font-color);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container .password-description .slidecontainer .slider::-webkit-slider-thumb:hover {
+  background-color: var(--password-strength-bg-color);
+  border: 1px solid var(--strong-password-bg-color);
+}
+.container .password-description .slidecontainer .slider::-moz-range-thumb {
+  width: 21px;
+  height: 21px;
+  background: var(--font-color);
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container .password-description .slidecontainer .slider::-moz-range-thumb:hover {
+  background-color: var(--password-strength-bg-color);
+  border: 1px solid var(--strong-password-bg-color);
+}/*# sourceMappingURL=style.css.map */

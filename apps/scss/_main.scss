@@ -1,0 +1,131 @@
+.container{
+    width: 400px;
+
+    @include breakpoint-down(medium){
+        width: 100%;
+    }
+
+    .header{
+        font-weight: 400;
+        color: var(--header-color);
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 0.5rem 0 1.25rem;
+    }
+
+    .password-generator-box{
+        background-color: var(--generated-password-bg-color);
+        width: 100%;
+        height: 7vh;
+        display: flex;
+        margin-bottom: 1.25rem;
+        padding-inline: 1.25rem;
+
+        .passwordText{
+            color: var(--placeholder-color);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            width: 90%;
+            height: 100%;
+
+            @include breakpoint-down(small){
+                font-size: 1.25rem;
+            }
+        }
+
+        .clipboard{
+            width: 10%;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--strong-password-bg-color);
+            height: 100%;
+
+            i {
+                &:hover{
+                    background-color: var(--password-strength-bg-color);
+                }
+            }
+        }
+    }
+
+    .password-description {
+        background-color: var(--generated-password-bg-color);
+        padding: 1.25rem;
+
+        .password-length {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            span {
+                display: inline-block;
+                color: var(--font-color);
+            }
+
+            .password-number{
+                font-size: 1.5rem;
+                color: var(--strong-password-bg-color);
+            }
+        }
+
+        .slidecontainer{
+            padding: 0.5rem 0;
+            width: 100%;
+
+            .slider{
+                width: 100%;
+                -webkit-appearance: none;
+                appearance: none;
+                height: 7px; 
+                background: var(--password-strength-bg-color);
+                outline: none; 
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                background-image: linear-gradient(var(--strong-password-bg-color), var(--strong-password-bg-color));
+                background-size: 0% 100%;
+                background-repeat: no-repeat;
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 21px; 
+                height: 21px;
+                background: var(--font-color); 
+                cursor: pointer;
+                border-radius: 50%;
+
+                &:hover{
+                    background-color: var(--password-strength-bg-color);
+                    border: 1px solid var(--strong-password-bg-color);
+                }
+
+
+              }
+
+              .slider::-moz-range-thumb {
+                width: 21px;
+                height: 21px;
+                background: var(--font-color); 
+                cursor: pointer;
+                border-radius: 50%;
+
+                &:hover{
+                    background-color: var(--password-strength-bg-color);
+                    border: 1px solid var(--strong-password-bg-color);
+                }
+              }
+
+
+        }
+    }
+}

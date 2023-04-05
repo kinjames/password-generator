@@ -1,0 +1,31 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+:root {
+    --main-bg-color: #{$backgroundColor};
+    --generated-password-bg-color: #{$grayish700};
+    --header-color: #{$grayish400};
+    --font-color: #{$grayish200};
+    --placeholder-color: #{$grayish400};
+    --password-strength-bg-color: #{$grayish900};
+    --poor-password-bg-color: #{$red};
+    --weak-password-bg-color: #{$orange};
+    --medium-password-bg-color: #{$yellow};
+    --strong-password-bg-color: #{$green};
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
