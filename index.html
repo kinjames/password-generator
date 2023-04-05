@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./apps/scss/style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Password Generator</h1>
+        <div class="password-generator-box">
+            <p class="passwordText">
+                P4$5W0rD!
+            </p>
+            <div class="clipboard">
+                <i class="fas fa-copy clip"></i>
+            </div>
+        </div>
+        <div class="password-description">
+            <div class="password-length">
+                <span>Character Length</span>
+                <span class="password-number">0</span>
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="0" max="20" value="0" class="slider" id="myRange">
+              </div>
+        </div>
+    </div>
+
+    <script src="./apps/js/script.js"></script>
+</body>
+</html>
