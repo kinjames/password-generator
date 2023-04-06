@@ -37,9 +37,10 @@
         .clipboard{
             width: 10%;
             font-size: 1.25rem;
+            position: relative;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             cursor: pointer;
             color: var(--strong-password-bg-color);
             height: 100%;
@@ -47,6 +48,33 @@
             i {
                 &:hover{
                     background-color: var(--password-strength-bg-color);
+                }
+            }
+
+            .popuptext{
+                display: none;
+                font-size: 0.87rem;
+                width: 80px;
+                background-color: var(--generated-password-bg-color);
+                color: var(--strong-password-bg-color);
+                text-align: center;
+                border-radius: 6px;
+                padding: 8px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                left: 50%;
+                margin-left: -50px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555 transparent transparent transparent;
                 }
             }
         }
@@ -75,6 +103,7 @@
         .slidecontainer{
             padding: 0.5rem 0;
             width: 100%;
+            margin-bottom: 1.25rem;
 
             .slider{
                 width: 100%;
@@ -126,6 +155,57 @@
               }
 
 
+        }
+
+        .checkboxes-btn{
+            margin-bottom: 1.5rem;
+
+
+        }
+
+        .btn {
+            width: 100%;
+            height: 45px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--password-strength-bg-color);
+            background-color: var(--strong-password-bg-color);
+            transition: all .4s ease-in-out;
+
+            span{
+                margin-left: 1.2rem;
+            }
+
+            &:hover{
+                color: var(--strong-password-bg-color);
+                background-color: var(--password-strength-bg-color);
+            }
+        }
+
+        .strength-checker{
+            width: 100%;
+            height: 7vh;
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            background-color: var(--password-strength-bg-color);
+            margin-bottom: 1.25rem;
+
+            .reps{
+                width: 80px;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    width: 15px;
+                    height: 100%;
+                    border: 1px solid var(--font-color);
+                }
+            }
         }
     }
 }

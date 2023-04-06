@@ -12,6 +12,7 @@ slider.oninput = () =>{
 
 clipBoard.onclick = () =>{
     copyToClipboard();
+    showPopUp();
 }
 
 const handleInputChange = () =>{
@@ -23,7 +24,14 @@ const handleInputChange = () =>{
 
 const copyToClipboard = () => {
     navigator.clipboard.writeText(passText).then(() => {
-        alert("Copied to clipboard");
     });
 }
+
+const showPopUp = () =>{
+        let popup = document.getElementById("myPopup");
+        popup.style.display = 'block';
+
+}
+
+
 
