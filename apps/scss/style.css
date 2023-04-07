@@ -82,6 +82,7 @@ body {
 }
 .containerss input:checked ~ .checkmark {
   background-color: var(--strong-password-bg-color);
+  border: 1px solid var(--strong-password-bg-color);
 }
 .containerss input:checked ~ .checkmark:after {
   display: block;

@@ -94,6 +94,7 @@ body{
 
     input:checked ~ .checkmark {
         background-color: var(--strong-password-bg-color);
+        border: 1px solid var(--strong-password-bg-color);
       }
 
 
