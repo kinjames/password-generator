@@ -3,14 +3,16 @@ let output = document.querySelector('.password-number');
 let passText = document.querySelector('.passwordText').innerHTML;
 let clipBoard = document.querySelector('.clip');
 let btn = document.getElementById('btn');
+let passwordBars = document.querySelectorAll('.span');
+let checkBox = document.querySelectorAll('.checkbox')
 let btns = document.querySelectorAll('.btns');
 
 
 output.innerHTML = slider.value;
 
-btn.onsubmit = () =>{
-    generatePassword();
-}
+btn.addEventListener('submit',()=>{
+    console.log(generatePassword(7,true,true,true,true))
+} )
 
 slider.oninput = () =>{
     output.innerHTML = slider.value;
@@ -65,6 +67,24 @@ const generatePassword = (length,hasNumber,hasUppercase,hasLowercase,hasSymbol) 
 
     return passWord;
 }
+
+checkBox.forEach( box => {
+    box.addEventListener('click',(e)=>{
+        let styles = e.currentTarget.classList;
+
+        if(includeUppercase()){
+            console.log('Uppercase');
+        } else if (styles.contains('lowercase')){
+            console.log('Lowercase')
+        } else if (styles.contains('numbers')){
+            console.log('Numbers')
+        } else {
+            console.log('Symbols')
+        }
+    })
+})
+
+
 
 
 
